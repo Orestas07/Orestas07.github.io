@@ -17,7 +17,16 @@
         </script>
     </head>
 <body class="font-sans bg-gray-100">
-
+    <style>
+        #navbar-menu {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        #navbar-menu.hidden {
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+        }
+    </style>
     <!-- Navbar -->
     <nav class="bg-blue-900 p-6 fixed w-full top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
@@ -33,8 +42,24 @@
                 <li><a href="#services" class="text-white hover:text-blue-300">Services</a></li>
                 <li><a href="#contact" class="text-white hover:text-blue-300">Contact</a></li>
             </ul>
+            <!-- Mobile Menu (Hidden by default) -->
+            <ul id="mobile-menu" class="lg:hidden absolute top-0 right-0 w-2/3 bg-blue-900 text-white p-6 mt-20 space-y-4 hidden">
+                <li><a href="#home" class="text-white hover:text-blue-300">Home</a></li>
+                <li><a href="#about-us" class="text-white hover:text-blue-300">About Us</a></li>
+                <li><a href="#services" class="text-white hover:text-blue-300">Services</a></li>
+                <li><a href="#contact" class="text-white hover:text-blue-300">Contact</a></li>
+            </ul>
         </div>
     </nav>
+    
+    <script>
+        // JavaScript to toggle the mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+    
 
     <!-- Hero Section -->
     <section id="home" class="relative py-32 bg-cover bg-center" style="background-image: url('truck.jpg');">
