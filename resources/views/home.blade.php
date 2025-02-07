@@ -17,7 +17,16 @@
         </script>
     </head>
 <body class="font-sans bg-gray-100">
-
+    <style>
+        #navbar-menu {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        #navbar-menu.hidden {
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+        }
+    </style>
     <!-- Navbar -->
     <nav class="bg-blue-900 p-6 fixed w-full top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
