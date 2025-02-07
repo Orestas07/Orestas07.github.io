@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OroGita - Reliable Trucking Solutions</title>
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OroGita - Reliable Trucking Solutions</title>
+        <!-- Tailwind CSS CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Font Awesome Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <script>
+            // JavaScript to toggle the mobile menu
+            function toggleMenu() {
+                const menu = document.getElementById('navbar-menu');
+                menu.classList.toggle('hidden');
+            }
+        </script>
+    </head>
 <body class="font-sans bg-gray-100">
 
     <!-- Navbar -->
     <nav class="bg-blue-900 p-6 fixed w-full top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-white text-2xl font-bold">OroGita</a>
-            <ul class="flex space-x-6">
+            <!-- Hamburger Menu Icon (Mobile Only) -->
+            <button class="text-white lg:hidden focus:outline-none" onclick="toggleMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <!-- Navbar Links -->
+            <ul id="navbar-menu" class="hidden lg:flex space-x-6">
                 <li><a href="#home" class="text-white hover:text-blue-300">Home</a></li>
                 <li><a href="#about-us" class="text-white hover:text-blue-300">About Us</a></li>
                 <li><a href="#services" class="text-white hover:text-blue-300">Services</a></li>
